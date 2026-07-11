@@ -329,13 +329,19 @@
   <section>
     <div class="eyebrow rv"><span class="n">03</span> Skill stack <span class="ln"></span></div>
     <h2 class="rv">Six things, not sixty</h2>
-    <p class="lead rv">These are the names that repeat across current Brisbane listings. Treat roadmap.sh as a checklist, not a curriculum — ignore the long tail.</p>
+    <p class="lead rv">Foundations first — <b>Linux, networking, servers</b> — then bolt these six tools on top. Treat a roadmap (roadmap.sh, or the one your NTI mentor flagged — <a href="https://github.com/milanm/DevOps-Roadmap" style="color:var(--teal);text-decoration:none;border-bottom:1px solid var(--line-strong)">milanm/DevOps-Roadmap</a>) as a checklist to map the terrain, not a curriculum to grind top-to-bottom. Ignore the long tail.</p>
+    <div class="ladder rv" style="margin-bottom:14px">
+      <span class="ll" style="color:var(--amber)">foundations · learn these first</span>
+      <span class="step">Linux + shell</span><span class="arrow">→</span>
+      <span class="step">Networking + security</span><span class="arrow">→</span>
+      <span class="step">Server basics</span>
+    </div>
     <div class="stack-chips">
       <span class="schip rv">AWS<span>one cloud, go deep</span></span>
       <span class="schip rv">Terraform<span>infra as code</span></span>
       <span class="schip rv">Docker → Kubernetes<span>containers + orchestration</span></span>
       <span class="schip rv">GitHub Actions<span>CI/CD — you know it</span></span>
-      <span class="schip rv">Linux + shell<span>assumed everywhere</span></span>
+      <span class="schip rv">Monitoring<span>observability — the pager</span></span>
       <span class="schip rv">Python<span>automation, nearly free</span></span>
     </div>
     <div class="ladder rv">
@@ -356,8 +362,9 @@
       <div class="stagebox rv"><span class="dot"></span><div class="body"><h4>1 · Containerize</h4><p>Package the app with Docker so it runs the same anywhere.</p></div></div>
       <div class="stagebox rv"><span class="dot"></span><div class="body"><h4>2 · Provision</h4><p>Write Terraform to stand up the AWS infrastructure — no clicking in the console.</p></div></div>
       <div class="stagebox rv"><span class="dot"></span><div class="body"><h4>3 · Pipeline</h4><p>GitHub Actions builds, tests, and deploys on every push.</p></div></div>
-      <div class="stagebox rv"><span class="dot"></span><div class="body"><h4>4 · Deploy live</h4><p>Put it on a real URL with basic monitoring. Not a toy that runs once on your laptop.</p></div></div>
-      <div class="stagebox key rv"><span class="dot"></span><div class="body"><h4>5 · Operate it ◆</h4><p>Maintain it. Let it break. Diagnose the failure and write up how you fixed it — that part can't be faked.</p></div></div>
+      <div class="stagebox rv"><span class="dot"></span><div class="body"><h4>4 · Deploy live</h4><p>Put it on a real URL. Not a toy that runs once on your laptop.</p></div></div>
+      <div class="stagebox rv"><span class="dot"></span><div class="body"><h4>5 · Observe</h4><p>Wire up metrics, logs, and alerts — Prometheus + Grafana, or CloudWatch. You can't operate what you can't see.</p></div></div>
+      <div class="stagebox key rv"><span class="dot"></span><div class="body"><h4>6 · Operate it ◆</h4><p>Maintain it. Let it break. Diagnose the failure and write up how you fixed it — that part can't be faked.</p></div></div>
     </div>
   </section>
 
@@ -385,6 +392,7 @@
         <h4>Set up &amp; build momentum</h4>
         <ul>
           <li><b>Make the NTI internship the priority.</b> Ask the DevOps engineer real questions, see a live pipeline, connect on LinkedIn, stay in touch — that's your warmest future referral.</li>
+          <li><b>Start with foundations — build a home lab.</b> An old laptop, a mini PC, or a $5/mo cloud VM is enough. Live in Linux (shell, permissions, systemd, networking) and break things freely — your zero-cost gym before anything runs on a real AWS bill.</li>
           <li>Spin up an <b>AWS free-tier account</b>, install Docker + Terraform, and lock in your portfolio project so it stops nagging you.</li>
           <li>Start <b>AWS Cloud Practitioner</b> if there's time around the internship.</li>
         </ul>
